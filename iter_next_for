@@ -1,0 +1,12 @@
+
+迭代器迭代
+dataloader = DataLoader(dataset, shuffle=True, batch_size=16)
+dataiter = iter(dataloader)              # dataiter为迭代器
+print(len(dataiter))                     # 10000个手写数据 =16*625 ，此处len为 625
+data = next(dataiter)[0].float()         # a为list对象，通过next获取下一条数据
+然后在 next(dataiter)
+
+
+dataloader = DataLoader(dataset, shuffle=True, batch_size=16)
+for batch_datas, batch_labels in dataloader:
+   
